@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimuLab - Simulation Question</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="min-h-full flex flex-col font-sans antialiased bg-slate-950 text-slate-100 p-4 sm:p-8">
+
+  <div class="max-w-6xl mx-auto w-full mb-6 flex items-center justify-between">
+    <a href="../index.html" class="text-xs font-semibold text-slate-400 hover:text-white flex items-center gap-2">
+      <i class="fa-solid fa-arrow-left"></i> Back to Hub
+    </a>
+    <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">Developer 4 Sandbox</span>
+  </div>
+
+  <main class="max-w-6xl mx-auto w-full space-y-6 flex-1">
+    
+    <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="px-3 py-1 rounded-lg bg-amber-500/10 text-amber-400 text-xs font-bold border border-amber-500/20">Lab #04</span>
+        <h2 class="text-base font-bold text-white">Projectile Motion Simulation</h2>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-slate-400">
+        <span><i class="fa-regular fa-clock text-amber-400 mr-1"></i> Time Remaining: <strong>14:20</strong></span>
+        <span><i class="fa-solid fa-trophy text-amber-400 mr-1"></i> Points: <strong>100 XP</strong></span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Interactive Simulation Sandbox -->
+      <div class="lg:col-span-2 bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between min-h-[380px] relative">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-mono text-slate-400"><i class="fa-solid fa-atom mr-1 text-indigo-400"></i> Interactive Canvas Sandbox</span>
+          <div class="flex items-center gap-2">
+            <button class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300 hover:bg-slate-700"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            <button class="px-2.5 py-1 rounded bg-indigo-600 text-xs text-white hover:bg-indigo-500"><i class="fa-solid fa-play"></i> Launch</button>
+          </div>
+        </div>
+
+        <div class="flex-1 bg-slate-950 rounded-xl border border-slate-800/80 p-4 flex flex-col justify-end items-start relative overflow-hidden sim-grid-bg">
+          <div class="relative z-10 bottom-2 left-4 flex items-center gap-2">
+            <div class="w-12 h-6 bg-indigo-500 rounded-r-full transform -rotate-12 shadow-lg shadow-indigo-500/50"></div>
+            <div class="w-6 h-6 rounded-full bg-slate-700 border-2 border-slate-500"></div>
+          </div>
+          <p class="absolute top-4 right-4 text-xs font-mono text-slate-500">Angle: 45° | Velocity: 25 m/s</p>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-3"><i class="fa-solid fa-circle-info mr-1"></i> Adjust the angle and velocity controls to observe trajectory impact.</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-3">Question Task</h3>
+          <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+            Calculate the horizontal displacement ($R$) of the projectile when launched at an initial angle of $45^\circ$ with initial speed $v = 25\text{ m/s}$.
+          </p>
+
+          <div class="space-y-2.5 mb-6">
+            <label class="flex items-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all">
+              <input type="radio" name="option" class="text-indigo-600 focus:ring-indigo-500">
+              <span class="ml-3 text-xs text-slate-300">A) 48.2 meters</span>
+            </label>
+            <label class="flex items-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all">
+              <input type="radio" name="option" class="text-indigo-600 focus:ring-indigo-500">
+              <span class="ml-3 text-xs text-slate-300">B) 63.7 meters</span>
+            </label>
+            <label class="flex items-center p-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all">
+              <input type="radio" name="option" class="text-indigo-600 focus:ring-indigo-500">
+              <span class="ml-3 text-xs text-slate-300">C) 72.1 meters</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <a href="Sim_hint_answer.html" class="w-full py-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 text-xs font-semibold transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-lightbulb"></i> Need a Hint? View Solution Guide
+          </a>
+          <button type="button" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition-all shadow-lg shadow-indigo-600/30">
+            Submit Answer
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
