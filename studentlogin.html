@@ -60,7 +60,10 @@
             <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-sky-600">
               <i class="fa-solid fa-lock"></i>
             </span>
-            <input type="password" placeholder="••••••••" required class="w-full pl-10 pr-4 py-3 bg-sky-50 border border-sky-200 rounded-xl text-sm text-slate-800 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all">
+            <input id="student-password" type="password" placeholder="••••••••" required class="w-full pl-10 pr-12 py-3 bg-sky-50 border border-sky-200 rounded-xl text-sm text-slate-800 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all">
+            <button type="button" id="toggle-password" aria-label="Show password" class="absolute inset-y-0 right-0 px-3.5 flex items-center text-slate-500 hover:text-sky-600 transition-colors">
+              <i class="fa-solid fa-eye"></i>
+            </button>
           </div>
         </div>
 
@@ -77,5 +80,16 @@
     </div>
   </main>
 
+  <script>
+    const passwordInput = document.getElementById('student-password');
+    const togglePassword = document.getElementById('toggle-password');
+
+    togglePassword.addEventListener('click', () => {
+      const isPasswordHidden = passwordInput.type === 'password';
+      passwordInput.type = isPasswordHidden ? 'text' : 'password';
+      togglePassword.setAttribute('aria-label', isPasswordHidden ? 'Hide password' : 'Show password');
+      togglePassword.innerHTML = `<i class="fa-solid fa-eye${isPasswordHidden ? '-slash' : ''}"></i>`;
+    });
+  </script>
 </body>
 </html>
